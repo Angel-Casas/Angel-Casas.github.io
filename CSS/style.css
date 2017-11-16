@@ -236,8 +236,40 @@ textarea:focus {
   border-color: rgb(13, 81, 153);
 }
 
-.about {
-  height: 100vh;
+.about > header > h2 {
+  text-align: center;
+  font-size: 1.6rem;
+}
+.about > p {
+  padding: 0 5px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.about p > span {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin: 20px 0;
+  border-bottom: 1px solid yellow;
+}
+.about li {
+  list-style: none;
+  padding: 10px 3px;
+  margin: 0 50px;
+  border-bottom: 1px solid black;
+}
+.about a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.about a:hover {
+  text-decoration: underline;
+}
+.images-group > img {
+  max-width: 40%;
+  padding: 10px;
+  cursor: pointer;
 }
 
 /* 2.1.1 HEADERS
