@@ -10,8 +10,9 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" type="text/css" href="CSS/style.css" />
-  <link rel="stylesheet" href="venobox/venobox.css" type="text/css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="CSS/lightgallery.css" />
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
   <div id="wrapper">
@@ -73,16 +74,16 @@
             to show the beauty of my home.
           </p>
           <div class="images-group">
-            <div class="row">
-              <div class="column">
-                <a class="venobox" href="https://www.dropbox.com/s/vabgmo7ldv45xor/DSC_0095%20copia.jpg?raw=1"><img src="https://www.dropbox.com/s/vabgmo7ldv45xor/DSC_0095%20copia.jpg?raw=1" alt="Parcial lunar eclipse outside my home, Las Palmas de Gran Canaria" /></a>
-                <a class="venobox" href="https://www.dropbox.com/s/iqj0cew4y9nd0q3/IMG_20170117_123542.jpg?raw=1"><img src="https://www.dropbox.com/s/iqj0cew4y9nd0q3/IMG_20170117_123542.jpg?raw=1" alt="View from the top of Gran Canaria" /></a>
-                <a class="venobox" href="https://www.dropbox.com/s/dt2bfozc5nzuxf5/panacea.jpg?raw=1"><img src="https://www.dropbox.com/s/dt2bfozc5nzuxf5/panacea.jpg?raw=1" alt="North coast of Gran Canaria" /></a>
+            <div class="row lightgallery">
+              <div class="column aniimated-thumbnials">
+                <a class="jg-entry" href="https://www.dropbox.com/s/vabgmo7ldv45xor/DSC_0095%20copia.jpg?raw=1"><img src="https://www.dropbox.com/s/1ghkzdx8rlax6lk/DSC_0095%20copia_tn.jpg?raw=1" alt="Parcial lunar eclipse outside my home, Las Palmas de Gran Canaria" /></a>
+                <a class="jg-entry" href="https://www.dropbox.com/s/iqj0cew4y9nd0q3/IMG_20170117_123542.jpg?raw=1"><img src="https://www.dropbox.com/s/wk68qi1rd1f7ply/IMG_20170117_123542_tn.jpg?raw=1" alt="View from the top of Gran Canaria" /></a>
+                <a class="jg-entry" href="https://www.dropbox.com/s/dt2bfozc5nzuxf5/panacea.jpg?raw=1"><img src="https://www.dropbox.com/s/eq6mkr0mdsuerh2/lomax%20copia_tn.jpg?raw=1" alt="North coast of Gran Canaria" /></a>
               </div>
-              <div class="column">
-                <a class="venobox" href="https://www.dropbox.com/s/uyfczehifhvku25/retocada2.jpg?raw=1"><img src="https://www.dropbox.com/s/uyfczehifhvku25/retocada2.jpg?raw=1" alt="Sunset in Gran Canaria" /></a>
-                <a class="venobox" href="https://www.dropbox.com/s/gurqo4bacxdcgby/DSC_0252%20copia.jpg?raw=1"><img src="https://www.dropbox.com/s/gurqo4bacxdcgby/DSC_0252%20copia.jpg?raw=1" alt="Beautiful Sunset at the beach, Gran Canaria" /></a>
-                <a class="venobox" href="https://www.dropbox.com/s/sp3q31c4ptlq03x/lomax%20copia.jpg?raw=1"><img src="https://www.dropbox.com/s/sp3q31c4ptlq03x/lomax%20copia.jpg?raw=1" alt="Waves crashing in the Sunset" /></a>
+              <div class="column aniimated-thumbnials">
+                <a class="jg-entry" href="https://www.dropbox.com/s/uyfczehifhvku25/retocada2.jpg?raw=1"><img src="https://www.dropbox.com/s/kf47fj99uhvcywe/retocada2_tn.jpg?raw=1" alt="Sunset in Gran Canaria" /></a>
+                <a class="jg-entry" href="https://www.dropbox.com/s/gurqo4bacxdcgby/DSC_0252%20copia.jpg?raw=1"><img src="https://www.dropbox.com/s/xygsc24fgesubp8/DSC_0252%20copia_tn.jpg?raw=1" alt="Beautiful Sunset at the beach, Gran Canaria" /></a>
+                <a class="jg-entry" href="https://www.dropbox.com/s/sp3q31c4ptlq03x/lomax%20copia.jpg?raw=1"><img src="https://www.dropbox.com/s/eq6mkr0mdsuerh2/lomax%20copia_tn.jpg?raw=1" alt="Waves crashing in the Sunset" /></a>
               </div>
             </div>
             <!-- end .row -->
@@ -102,9 +103,29 @@
       <div class="inner">
 
       </div>
-      <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script type="text/javascript" src="venobox/venobox.min.js"></script>
     </footer>
     <!-- end footer -->
   </div>
+
+    <!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+
+    <script src="js/lightgallery.min.js"></script>
+
+    <!-- lightgallery plugins -->
+    <script src="js/lg-thumbnail.min.js"></script>
+    <script src="js/lg-fullscreen.min.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("#lightgallery").lightGallery();
+    });
+
+
+    $('#aniimated-thumbnials').lightGallery({
+        thumbnail:true,
+        animateThumb: false,
+        showThumbByDefault: false
+    });
+</script>
 </body>
