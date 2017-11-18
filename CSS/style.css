@@ -250,7 +250,7 @@ textarea:focus {
   font-weight: bold;
   font-size: 1.3rem;
   margin: 20px 0;
-  border-bottom: 1px solid yellow;
+  border-bottom: 2px solid yellow;
 }
 .about li {
   list-style: none;
@@ -266,11 +266,33 @@ textarea:focus {
 .about a:hover {
   text-decoration: underline;
 }
-.images-group > img {
-  max-width: 40%;
-  padding: 10px;
-  cursor: pointer;
+.images-group {
+  border-top: 1px solid black;
 }
+.row {
+  display: flex;
+  justify-content: center;
+}
+.column {
+    float: left;
+    width: 40%;
+    padding: 10px;
+}
+.column img {
+    margin-top: 12px;
+    width: 90%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+   }
+}
+
 
 /* 2.1.1 HEADERS
 --------------------------------------------------------- */
