@@ -282,6 +282,10 @@ textarea:focus {
     margin-top: 12px;
     width: 90%;
 }
+.column a:hover {
+  opacity: 0.6;
+  transition: .5s ease;
+}
 .row:after {
     content: "";
     display: table;
