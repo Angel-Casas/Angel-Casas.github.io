@@ -119,14 +119,14 @@ html[xmlns] .clearfix {
 * html .clearfix {
   height: 1%;
 }
-
 /* custom */
 
 body {
-  background-image: url("https://cdn.wallpapersafari.com/51/67/lkfL2m.jpg");
+  background-image: url("../images/image-1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 }
 #wrapper {
   padding: 1em;
@@ -236,6 +236,47 @@ textarea:focus {
   border-color: rgb(13, 81, 153);
 }
 
+.projects {
+  text-align: center;
+  height: 1000px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.projects header h2 > span {
+  border-bottom: 2px solid yellow;
+}
+.box {
+  display: inline-block;
+  width: 25%;
+  font-size: 1.2rem;
+  min-width: 150px;
+  margin: 20px;
+  border: 1px solid black;
+  border-radius: 3px;
+  height: 200px;
+}
+.box a:hover {
+  text-decoration: underline;
+}
+.content {
+  height: inherit;
+}
+.content:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.content  h3 {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+#box1 {
+  background-image: url("../images/language-translation.png");
+  background-repeat: norepeat;
+  background-size: cover;
+  background-position: center;
+}
+.projects a {
+  color: black;
+  text-decoration: none;
+}
 .about > header > h2 {
   text-align: center;
   font-size: 1.6rem;
