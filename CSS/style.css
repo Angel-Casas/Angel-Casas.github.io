@@ -129,9 +129,9 @@ body {
   background-attachment: fixed;
 }
 #wrapper {
-  padding: 1em;
+  margin: 10px 5px;
   outline: 2px solid black;
-  outline-offset: -1.5em;
+  outline-offset: -7px;
 }
 
 #main-header {
@@ -145,7 +145,7 @@ body {
 
 }
 #content {
-  padding: 5px 10px;
+  padding: 0 10px;
   background: rgba(255, 255, 255, 0.8);
 }
 #lens {
@@ -246,8 +246,8 @@ textarea:focus {
   display: inline-block;
   box-sizing: border-box;
   width: 25%;
-  font-size: 1.2rem;
   min-width: 150px;
+  font-size: 1.2rem;
   margin: 10px 20px;
   border: 1px solid black;
   border-radius: 3px;
@@ -321,7 +321,7 @@ textarea:focus {
 .about li {
   list-style: none;
   padding: 10px 3px;
-  margin: 15px 50px;
+  margin: 15px 20px;
   border-bottom: 1px solid black;
 }
 .about a {
