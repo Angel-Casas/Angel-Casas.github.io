@@ -368,6 +368,41 @@ textarea:focus {
         width: 100%;
    }
 }
+.sub-footer {
+  padding: 10px 0;
+  border-top: 1px solid black;
+}
+.sub-footer > h2 {
+  text-align: center;
+  font-size: 1.6rem;
+}
+.sub-footer > p {
+  text-align: left;
+}
+.sub-footer .red-info {
+  color: rgb(210, 0, 0);
+  text-align: center;
+  padding: 10px 0;
+  display: block;
+  font-size: 1.2rem;
+}
+.sub-footer a {
+  text-decoration: none;
+}
+.sub-footer a:hover {
+  text-decoration: underline;
+  color: rgb(210, 0, 0);
+}
+.sub-footer .patreon {
+  width: 50%;
+  display: block;
+  margin: auto;
+}
+.sub-footer .qr {
+  width: 25%;
+  display: block;
+  margin:auto;
+}
 footer {
   background-color: rgba(255, 255, 255, 0.8);
 }
@@ -384,7 +419,7 @@ footer .inner h2 {
   font-size: 1.2rem;
 }
 footer > p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: grey;
   text-align: center;
   padding: 3px 0;
