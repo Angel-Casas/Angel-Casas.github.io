@@ -133,7 +133,12 @@ body {
   outline: 2px solid black;
   outline-offset: -7px;
 }
-
+@media screen and (min-width: 800px) {
+  #wrapper {
+    width: 800px;
+    margin: 10px auto;
+  }
+}
 #main-header {
   background: -webkit-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8)); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8)); /* For Opera 11.1 to 12.0 */
@@ -394,12 +399,12 @@ textarea:focus {
   color: rgb(210, 0, 0);
 }
 .sub-footer .patreon {
-  width: 50%;
+  width: 300px;
   display: block;
   margin: auto;
 }
 .sub-footer .qr {
-  width: 25%;
+  width: 150px;
   display: block;
   margin:auto;
 }
