@@ -205,7 +205,7 @@ input[type="submit"] {
   text-decoration: underline;
 }
 .post .entry {
-  height: 500px;
+  height: 100%;
   padding: 0 3px;
 }
 #drop-cap {
