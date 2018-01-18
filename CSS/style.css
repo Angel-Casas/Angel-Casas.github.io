@@ -135,7 +135,7 @@ body {
 }
 @media screen and (min-width: 800px) {
   #wrapper {
-    width: 800px;
+    width: 90vw;
     margin: 10px auto;
   }
 }
@@ -217,10 +217,13 @@ input[type="submit"] {
   margin: 5px;
   color: rgb(220, 170, 50);
 }
-#comments {
+#comments-section {
   text-align: center;
   padding: 0 10px;
   border-top: 1px solid black;
+}
+#comments {
+
 }
 form p > label {
   display: inline-block;
