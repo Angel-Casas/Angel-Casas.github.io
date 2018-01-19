@@ -223,6 +223,9 @@ input[type="submit"] {
   padding: 0 10px;
   border-top: 1px solid black;
 }
+#comments-section  > h3 {
+    font-size: 1.4rem;
+  }
 #comments {
 
 }
