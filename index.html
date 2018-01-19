@@ -75,29 +75,8 @@ Work in Progress.
         <section id="comments-section">
           <h3>-Comments Section-</h3>
           <time datetime="2017-11-08T13:05:21+01:00"></time>
-          <div id="form">
-            <h3>Ask your Question.</h3>
-            <form action=".php" method="post" id="commentform">
-              <p>
-                <label for="author">Name (Requiered):</label>
-                <input type="text" name="author" id="author" value size="8" tabindex="1" aria-required="true" required>
-              </p>
-              <p>
-                <label for="email">Mail (will not be published)(Required):</label>
-                <input type="email" name="email" id="email" value size="8" tabindex="2" aria-required="true" required>
-              </p>
-              <p>
-                <label class="screenreader" for="comment">Enter comment:</label>
-                <textarea aria-required="true" required name="comment" id="comment" cols="50" rows="10" tabindex="3"></textarea>
-              </p>
-              <p>
-                <input name="submit" type="submit" id="submit" tabindex="4" value="Submit comment">
-                <input type="hidden" name="comment_post_ID" value="1" id="comment_post_ID">
-                <input type="hidden" name="comment_parent" id="comment_parent" value="0">
-              </p>
-            </form>
-          </div>
           <div id="comments">
+            <h3>Ask your Question.</h3>
             <div id="disqus_thread"></div>
               <script>
 

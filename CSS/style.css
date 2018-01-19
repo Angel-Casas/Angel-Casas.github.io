@@ -132,6 +132,7 @@ body {
   margin: 10px 5px;
   outline: 2px solid black;
   outline-offset: -7px;
+  box-sizing: border-box;
 }
 @media screen and (min-width: 800px) {
   #wrapper {
@@ -147,7 +148,7 @@ body {
   text-align: center;
   padding: 10px;
   color: white;
-
+  font-family: "playfair Display SC";
 }
 #content {
   padding: 0 10px;
@@ -155,7 +156,6 @@ body {
 }
 #lens {
   font-size: 3.6rem;
-  font-family: "playfair Display SC";
   letter-spacing: 1.6rem;
   color: black;
   padding: 5px 0;
@@ -207,6 +207,7 @@ input[type="submit"] {
 .post .entry {
   height: 100%;
   padding: 0 3px;
+  margin-bottom: 20px;
 }
 #drop-cap {
   font-size: 2.4rem;
@@ -256,9 +257,8 @@ textarea:focus {
   display: inline-block;
   box-sizing: border-box;
   width: 25%;
-  min-width: 150px;
   font-size: 1.2rem;
-  margin: 10px 20px;
+  margin: 10px;
   border: 1px solid black;
   border-radius: 3px;
   height: 200px;
@@ -386,6 +386,7 @@ textarea:focus {
 }
 .sub-footer > p {
   text-align: left;
+  text-indent: 1em;
 }
 .sub-footer .red-info {
   color: rgb(210, 0, 0);
