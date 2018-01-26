@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+  <title>Machine Learning - Deep Learning - Blog</title>
+  <meta name="description" content="Machine Learning/Deep Learning blog from a young student">
+  <meta name="author" content="Angel - www">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
+</head>
+<body>
+<div id="wrapper">
+  <header id="main-header">
+    <h1>Machine Learning Through another</h1>
+    <span id="lens">LENS</span>
+    <nav id="main-nav">
+      <ul>
+        <li>
+          <form id="search-form" action="/search/" role="search" method="get">
+            <div>
+              <input type="text" name="q" id="searchfield" value="example: Linear Regression">
+              <input type="submit" id="search-button" value="Search">
+            </div>
+          </form>
+        </li>
+      </ul>
+      <ul id="menu-main-nav">
+        <li><a href="index.html">Posts</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="About.html">About</a></li>
+      </ul>
+      <!-- end ul -->
+    </nav>
+    <!-- end nav -->
+  </header>
+  <!-- end header -->
+  <main id="content" class="clearfix" role="main">
+    <div class="main">
+      <article id="roadmap">
+        <header>
+          <h2>Roadmap</h2>
+        </header>
+        <section class="timeline">
+          <ul>
+            <li>
+              <div>
+                <h3>Back to basics</h3>
+                <p></p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Journey into Machine Learning</h3>
+                <p></p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Learning from Data</h3>
+                <p></p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Learning from Experience</h3>
+                <p></p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Tensorflow - Theano - Pytorch</h3>
+                <p></p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Project<br /> - Neural Machine Translation -</h3>
+                <p></p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Project<br /> - Sign Language Generator -</h3>
+                <p></p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Project<br /> - Clothing Classifier -</h3>
+                <p></p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Journey's end</h3>
+                <p></p>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </article>
+      <!-- end .post -->
+    </div>
+    <!-- end .main -->
+    <aside>
+
+    </aside>
+    <!-- end #sub-footer -->
+  </main>
+  <!-- end #content -->
+  <footer>
+    <div class="inner">
+      <header>
+        <h2>Ángel Casas Pescador</h2>
+        <p>
+          Las Palmas de Gran Canaria, Spain.
+        </p>
+      </header>
+      <div class="icons">
+      <a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+      <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+      <a href="#"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <p>
+      - "A soul without restraints can reach the unlimited" -
+    </p>
+  </footer>
+  <!-- end footer -->
+</div>
+<!-- end #wrapper -->
+<script>
+  (function() {
+
+  'use strict';
+
+  // define variables
+  var items = document.querySelectorAll(".timeline li");
+
+  // check if an element is in viewport
+  // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function callbackFunc() {
+    for (var i = 0; i < items.length; i++) {
+      if (isElementInViewport(items[i])) {
+        items[i].classList.add("in-view");
+      }
+    }
+  }
+
+  // listen for events
+  window.addEventListener("load", callbackFunc);
+  window.addEventListener("resize", callbackFunc);
+  window.addEventListener("scroll", callbackFunc);
+
+  })();
+</script>
+</body>
+</html>
