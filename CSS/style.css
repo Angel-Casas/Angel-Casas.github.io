@@ -122,7 +122,7 @@ html[xmlns] .clearfix {
 /* custom */
 
 body {
-  background-image: url("../images/image-1.jpg");
+  background-image: url("../images/boxComposite_TNG100-1_gas-shocks_machnum_dm-coldens_2000 copia-2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -138,6 +138,11 @@ body {
   #wrapper {
     width: 90vw;
     margin: 10px auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  #menu-main-nav li a {
+    padding: 2px 5px;
   }
 }
 #main-header {
