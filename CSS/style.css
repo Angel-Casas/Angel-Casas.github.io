@@ -146,10 +146,10 @@ body {
   }
 }
 #main-header {
-  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8)); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8)); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8)); /* Standard syntax */
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)); /* Standard syntax */
   text-align: center;
   padding: 10px;
   color: white;
@@ -157,7 +157,7 @@ body {
 }
 #content {
   padding: 0 10px;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
 }
 #lens {
   font-size: 3.6rem;
@@ -269,6 +269,10 @@ textarea:focus {
 @media screen and (max-width: 600px) {
   .box-area {
     grid-template-columns: 1fr 1fr;
+  }
+  .box {
+    width: 100px !important;
+    height: 150px !important;
   }
 }
 .box {
@@ -525,7 +529,10 @@ textarea:focus {
   display: block;
 }
 footer {
-  background-color: rgba(255, 255, 255, 0.8);
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2)); /* Standard syntax */
 }
 footer .inner {
   padding: 10px;
@@ -540,8 +547,8 @@ footer .inner h2 {
   font-size: 1.2rem;
 }
 footer > p {
-  font-size: 0.9rem;
-  color: grey;
+  font-size: 1.2rem;
+  color: white;
   text-align: center;
   padding: 3px 0;
 }
