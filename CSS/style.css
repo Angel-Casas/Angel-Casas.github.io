@@ -231,8 +231,8 @@ input[type="submit"] {
 #comments-section  > h3 {
     font-size: 1.4rem;
   }
-#comments {
-
+#disqus_thread {
+  color: black;
 }
 form p > label {
   display: inline-block;
@@ -547,7 +547,7 @@ footer .inner h2 {
   font-size: 1.2rem;
 }
 footer > blockquote {
-  font-size: 0.9rem;
+  font-size: 0.9sasrem;
   text-align: center;
   padding: 3px 0;
 }
@@ -555,15 +555,12 @@ footer a {
   text-decoration: none;
   display: inline-block;
   color: inherit;
-  margin: 0 10px;
+  margin: 0 2.5px;
 }
 footer a:hover {
   transition: 0.2s ease;
   color: rgb( 255, 87, 51);
   text-decoration: underline;
-}
-footer span {
-  padding: 0 5px;
 }
 @media (max-width: 600px) {
   footer .inner h2 {
@@ -571,6 +568,9 @@ footer span {
   }
   footer .inner p {
     font-size: 0.8rem;
+  }
+  footer blockquote > p {
+    font-size: 0.7rem;
   }
 }
 /* 2.1.1 HEADERS
