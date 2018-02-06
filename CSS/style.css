@@ -261,10 +261,19 @@ textarea:focus {
 .projects header h2 > span {
   border-bottom: 2px solid yellow;
 }
+.box-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+@media screen and (max-width: 600px) {
+  .box-area {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .box {
-  display: inline-block;
   box-sizing: border-box;
-  width: 25%;
+  width: 150px;
   font-size: 1.2rem;
   margin: 10px;
   border: 1px solid black;
