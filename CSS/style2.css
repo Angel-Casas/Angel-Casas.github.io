@@ -114,7 +114,6 @@ header {
   position: fixed;
   top: 10vh;
   height: 90vh;
-  min-height: 400px;
 }
 .Title {
   width: 100%;
@@ -122,7 +121,7 @@ header {
   font-size: 1.2rem;
   display: flex;
   flex: 1 100%;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: center;
   flex-flow: column nowrap;
 }
@@ -135,8 +134,7 @@ header {
 .Title > #sub-title span {
   font-size: 2.0rem;
   display: block;
-  width: 100%;
-  padding: 20px 0;
+  padding: 30px 0;
 }
 .Title > blockquote {
   height: 10%;
@@ -176,6 +174,9 @@ header .image-frame {
   }
   .image-frame > .front-image {
     height: 150px;
+  }
+  .Title > #sub-title span {
+    padding: 15px 0;
   }
 }
 #first-image {
