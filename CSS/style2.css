@@ -166,26 +166,15 @@ header .image-frame {
   width: 100%;
   height: 250px;
 }
-@media screen and (max-width: 600px) {
-  .Title {
-    justify-content: space-between;
-  }
-  .Title h1 {
-    font-size: 3.8rem;
-  }
-  .Title > #sub-title span {
-    font-size: 2.0rem;
-    padding: 10px 0;
-  }
+@media screen and (max-height: 700px) {
   .image-frame > .front-image {
-    width: 100%;
-    height: 125px;
+    height: 150px;
   }
   #first-image {
-    background-size: 250px !important;
+    background-size: 300px !important;
   }
   #second-image {
-    background-size: 250px !important;
+    background-size: 300px !important;
   }
 }
 #first-image {
