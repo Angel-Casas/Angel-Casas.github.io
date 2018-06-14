@@ -98,25 +98,26 @@ table{
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;
+  width: 100%;
+  height: 100%;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   color: white;
   background-color: black;
 }
 header {
-  width: 100%;
   position: fixed;
-  top: 10vh;
-  height: 90vh;
+  top: 10%;
+  height: 90%;
+  width: 100%;
 }
 .Title {
-  width: 100%;
   height: 100%;
   font-size: 1.2rem;
   display: flex;
@@ -166,17 +167,25 @@ header .image-frame {
   height: 250px;
 }
 @media screen and (max-width: 600px) {
-  #first-image {
-    background-size: 300px !important;
+  .Title {
+    justify-content: space-between;
   }
-  #second-image {
-    background-size: 300px !important;
-  }
-  .image-frame > .front-image {
-    height: 150px;
+  .Title h1 {
+    font-size: 3.8rem;
   }
   .Title > #sub-title span {
-    padding: 15px 0;
+    font-size: 2.0rem;
+    padding: 10px 0;
+  }
+  .image-frame > .front-image {
+    width: 100%;
+    height: 125px;
+  }
+  #first-image {
+    background-size: 250px !important;
+  }
+  #second-image {
+    background-size: 250px !important;
   }
 }
 #first-image {
