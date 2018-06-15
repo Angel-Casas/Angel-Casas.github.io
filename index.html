@@ -65,6 +65,18 @@
     }
     setInterval(nextQuote, 8000);
     // end random quotes script
+    var folded = new OriDomi(document.getElementsByClassName('front-image')[0]);
+    var folded = new OriDomi('.front-image', {
+  vPanels:         1,     // number of panels when folding left or right (vertically oriented)
+  hPanels:         0,     // number of panels when folding top or bottom
+  speed:           1200,  // folding duration in ms
+  ripple:          2,     // backwards ripple effect when animating
+  shadingIntesity: .5,    // lessen the shading effect
+  perspective:     800,   // smaller values exaggerate 3D distortion
+  maxAngle:        40,    // keep the user's folds within a range of -40 to 40 degrees
+  shading:         'soft' // change the shading type
+});
+  folded.curl(-50, 'top');
   </script>
   </body>
 </html>

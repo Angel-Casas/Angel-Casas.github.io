@@ -115,7 +115,7 @@ header {
   position: fixed;
   top: 10%;
   left: 0;
-  height:80%;
+  height:75%;
   width: 100%;
 }
 .Title {
@@ -129,14 +129,14 @@ header {
   flex-flow: column nowrap;
 }
 .Title h1 {
-  font-size: 3.8rem;
+  font-size: 10.8vmin;
 }
 .Title > #sub-title {
 }
 .Title > #sub-title span {
   font-size: 1.4rem;
   display: block;
-  padding: 30px 0;
+  padding: 25px 0;
 }
 .Title > blockquote {
   height: 10%;
@@ -144,7 +144,6 @@ header {
 }
 .Title > .navigation-bar {
   font-size: 1.6rem;
-  border-bottom: 1px solid white;
   margin: 0 20px;
 }
 .navigation-bar > ul {
@@ -155,7 +154,9 @@ header {
 .navigation-bar ul li {
   cursor: pointer;
   width: 100%;
+  border-bottom: 1px solid white;
   padding: 5px 0;
+  margin: 0 5px;
   transition: background-color 1s;
 }
 .navigation-bar ul li:hover {
@@ -174,12 +175,12 @@ header > .image-frame {
 }
 
 .front-image {
-  width: 90%;
+  width: 100%;
   min-width: 300px;
-  max-width: 400px;
+  max-width: 430px;
   height: 80%;
-  max-height: 230px !important;
-  min-height: 200px;
+  max-height: 250px !important;
+  min-height: 230px;
   margin: 0 auto;
 }
 @media screen and (max-width: 400px) {
@@ -195,13 +196,8 @@ header > .image-frame {
   }
 }
 @media screen and (orientation: portrait) {
-  .front-image {
-  }
 }
 @media screen and (orientation: landscape) {
-  .Title h1 {
-    font-size: 1.8rem;
-  }
 }
 
 #first-image {
