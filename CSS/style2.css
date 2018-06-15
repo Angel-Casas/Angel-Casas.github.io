@@ -114,21 +114,22 @@ body {
 header {
   position: fixed;
   top: 10%;
-  height: 80%;
+  left: 0;
+  height:80%;
   width: 100%;
 }
 .Title {
   height: 100%;
+  width: 100%;
   font-size: 1.2rem;
   display: flex;
   flex: 1 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: center;
   flex-flow: column nowrap;
 }
 .Title h1 {
   font-size: 3.8rem;
-  mix-blend-mode: exclusion;
 }
 .Title > #sub-title {
 }
@@ -152,31 +153,36 @@ header {
 .navigation-bar ul > li {
   cursor: pointer;
 }
-header .image-frame {
+header > .image-frame {
   width: 100%;
+  height: 100%;
   position: absolute;
-  top: 20vh;
   left: 0;
+  top: 0;
   z-index: -1;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
 }
-.image-frame > .front-image {
+.front-image {
   width: 100%;
-  height: 250px;
 }
-@media screen and (max-height: 700px) {
-  .image-frame > .front-image {
-    height: 150px;
-  }
-  #first-image {
-    background-size: 300px !important;
-  }
-  #second-image {
-    background-size: 300px !important;
+@media screen and (max-height: 400px) {
+  .Title > #sub-title span {
+    padding: 10px 0;
   }
 }
+@media screen and (orientation: portrait) {
+  .front-image {
+    height:250px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .front-image {
+    height: 250px;
+  }
+}
+
 #first-image {
   background-image: url("../images/jupiter.png");
   background-position: center top;
