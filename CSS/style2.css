@@ -164,35 +164,51 @@ header > .image-frame {
   flex-flow: column nowrap;
   justify-content: center;
 }
+
 .front-image {
-  width: 100%;
+  width: 90%;
+  min-width: 300px;
+  max-width: 400px;
+  height: 80%;
+  max-height: 230px !important;
+  min-height: 200px;
+  margin: 0 auto;
 }
-@media screen and (max-height: 400px) {
-  .Title > #sub-title span {
-    padding: 10px 0;
+@media screen and (max-width: 400px) {
+  #first-image {
+    background-size: 150% !important;
+    transition: background-size 1s;
+    transition-timing-function: ease-in;
+  }
+  #second-image {
+    background-size: 150% !important;
+    transition: background-size 1s;
+    transition-timing-function: ease-in;
   }
 }
 @media screen and (orientation: portrait) {
   .front-image {
-    height:250px;
   }
 }
 @media screen and (orientation: landscape) {
   .front-image {
-    height: 250px;
   }
 }
 
 #first-image {
   background-image: url("../images/jupiter.png");
   background-position: center top;
-  background-size: 500px;
+  background-size: 120%;
   background-repeat: no-repeat;
+  transition: background-size 1s;
+  transition-timing-function: ease-in;
   border-bottom: 2px solid black;
 }
 #second-image {
   background-image: url("../images/iris.jpg");
   background-position: center bottom;
-  background-size: 500px;
+  background-size: 120%;
   background-repeat: no-repeat;
+  transition: background-size 1s;
+  transition-timing-function: ease-in;
 }
