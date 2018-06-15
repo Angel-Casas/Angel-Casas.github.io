@@ -134,24 +134,32 @@ header {
 .Title > #sub-title {
 }
 .Title > #sub-title span {
-  font-size: 2.0rem;
+  font-size: 1.4rem;
   display: block;
   padding: 30px 0;
 }
 .Title > blockquote {
   height: 10%;
-  padding: 0 10px;
+  padding: 0px 10px;
 }
 .Title > .navigation-bar {
   font-size: 1.6rem;
+  border-bottom: 1px solid white;
+  margin: 0 20px;
 }
 .navigation-bar > ul {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
 }
-.navigation-bar ul > li {
+.navigation-bar ul li {
   cursor: pointer;
+  width: 100%;
+  padding: 5px 0;
+  transition: background-color 1s;
+}
+.navigation-bar ul li:hover {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 header > .image-frame {
   width: 100%;
@@ -177,12 +185,12 @@ header > .image-frame {
 @media screen and (max-width: 400px) {
   #first-image {
     background-size: 150% !important;
-    transition: background-size 1s;
+    transition: background-size 2s;
     transition-timing-function: ease-in;
   }
   #second-image {
     background-size: 150% !important;
-    transition: background-size 1s;
+    transition: background-size 2s;
     transition-timing-function: ease-in;
   }
 }
@@ -191,7 +199,8 @@ header > .image-frame {
   }
 }
 @media screen and (orientation: landscape) {
-  .front-image {
+  .Title h1 {
+    font-size: 1.8rem;
   }
 }
 
