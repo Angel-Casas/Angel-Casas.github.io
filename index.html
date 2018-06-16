@@ -65,18 +65,42 @@
     }
     setInterval(nextQuote, 8000);
     // end random quotes script
-    var folded = new OriDomi(document.getElementsByClassName('front-image')[0]);
-    var folded = new OriDomi('.front-image', {
-  vPanels:         1,     // number of panels when folding left or right (vertically oriented)
-  hPanels:         0,     // number of panels when folding top or bottom
-  speed:           1200,  // folding duration in ms
-  ripple:          2,     // backwards ripple effect when animating
-  shadingIntesity: .5,    // lessen the shading effect
-  perspective:     800,   // smaller values exaggerate 3D distortion
-  maxAngle:        40,    // keep the user's folds within a range of -40 to 40 degrees
-  shading:         'soft' // change the shading type
-});
-  folded.curl(-50, 'top');
+    (function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var demos, logo, methods;
+    if (!OriDomi.isSupported) {
+      document.getElementById('unsupported').style.display = 'block';
+      return;
+    }
+    demos = [
+      new OriDomi('.front-image', {
+        vPanels: 0,
+        hPanels: 1;
+        ripple: true
+      })
+    ];
+    setTimeout(function() {
+      demos[0].accordion(30);
+      return demos[0].accordion(45, 'top');
+    }, 1000);
+    methods = ['accordion', 'stairs', 'curl', 'reveal', 'foldUp', 'ramp', 'twist', 'fracture'];
+    return document.getElementById('.image-frame').addEventListener('click', function(e) {
+      var angle, el, method, n;
+      if ((el = e.target).className !== 'button') {
+        return;
+      }
+      n = el.getAttribute('data-n');
+      method = methods[Math.abs(Math.floor(Math.random() * methods.length - Math.random()))];
+      angle = Math.floor(Math.random() * 80 * (Math.random() > .5 ? -1 : 1));
+      demos[n][method](method !== 'foldUp' ? angle : void 0);
+      if (method === 'foldUp') {
+        angle = '';
+      }
+      return el.parentNode.getElementsByClassName('label')[0].innerHTML = "" + method + "(" + angle + ")";
+    }, false);
+  });
+
+}).call(this);
   </script>
   </body>
 </html>
