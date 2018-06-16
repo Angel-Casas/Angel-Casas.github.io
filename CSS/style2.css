@@ -121,6 +121,8 @@ header {
 .Title {
   height: 100%;
   width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
   font-size: 1.2rem;
   display: flex;
   flex: 1 100%;
