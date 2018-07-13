@@ -193,8 +193,8 @@
     // Transition from presentation to blog:
     function transition() {
       var body = document.getElementById('base');
-      var presentation = document.getElementsByClassName('presentation')[0];
-      var wrapper = document.getElementsByClassName('wrapper')[0];
+      var presentation = document.getElementById('presentation');
+      var wrapper = document.getElementById('wrapper');
       if (body.className == 'intro') {
         body.className = 'main-body';
         presentation.style.display = 'none';

@@ -145,10 +145,472 @@ body {
   display: none;
 }
 
-/* FONT SIZE */
+/* main website starts here */
+#wrapper {
+  display: none;
+  margin: 10px 5px;
+  outline: 2px solid black;
+  outline-offset: -7px;
+  box-sizing: border-box;
+}
+.main-body {
+  background-image: url("../images/boxComposite_TNG100-1_gas-shocks_machnum_dm-coldens_2000 copia-2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+@media screen and (min-width: 800px) {
+  #wrapper {
+    width: 90vw;
+    margin: 10px auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  #menu-main-nav li a {
+    padding: 2px 5px;
+  }
+}
+#main-header {
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)); /* Standard syntax */
+  text-align: center;
+  min-height: 400px;
+  padding: 10px;
+  color: white;
+  font-family: "playfair Display SC";
+}
+#content {
+  padding: 0 10px;
+  background: rgba(255, 255, 255, 0.9);
+}
+#lens {
+  display: block;
+  font-size: 1.6rem;
+  padding: 5px 0;
+}
+#menu-main-nav {
+  align-items: center;
+  height: 50px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+#menu-main-nav li {
+  width: 100%;
+}
+#menu-main-nav a {
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  padding: 5px 10px;
+}
+#menu-main-nav a:hover {
+  background-color: black;
+  color: white;
+  transition: 0.6s;
+}
+#search-form > div input[type="text"] {
+  width: 50%;
+}
+input[type="submit"] {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 2em;
+}
+.post {
+  padding: 10px 0;
+}
+.tweet {
+  padding: 10px 5px;
+}
+.post a {
+  text-decoration: none;
+  color: black;
+}
+.post a:hover {
+  text-decoration: underline;
+}
+.post .entry {
+  height: 100%;
+  padding: 0 3px;
+  margin-bottom: 20px;
+}
+#drop-cap {
+  font-size: 2.4rem;
+  outline: 1px solid rgb(220, 170, 50);
+  outline-offset: -5px;
+  border: 1px solid rgb(220, 170, 50);
+  padding: 3px 5px;
+  margin: 5px;
+  color: rgb(220, 170, 50);
+}
+#comments-section {
+  text-align: center;
+  padding: 0 10px;
+  border-top: 1px solid black;
+}
+#comments-section  > h3 {
+    font-size: 1.4rem;
+  }
+#disqus_thread {
+  color: black;
+}
+form p > label {
+  display: inline-block;
+  float: left;
+}
+input[type=text],
+input[type=email],
+input[type=password],
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=submit]:focus,
+input[type=password]:focus,
+textarea:focus {
+  outline: 0;
+  border-color: rgb(13, 81, 153);
+}
+
+.projects {
+  text-align: center;
+  border-top: 1px solid black;
+}
+.projects header h2 > span {
+  border-bottom: 2px solid yellow;
+}
+.box-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+@media screen and (max-width: 600px) {
+  .box-area {
+    grid-template-columns: 1fr 1fr;
+  }
+  .box {
+    width: 100px !important;
+    height: 150px !important;
+  }
+}
+.box {
+  box-sizing: border-box;
+  width: 150px;
+  font-size: 1.2rem;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 3px;
+  height: 200px;
+}
+.box a:hover {
+  text-decoration: underline;
+}
+.content {
+  height: inherit;
+}
+.content:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: 0.5s ease;
+}
+.content  h3 {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+#box1 {
+  background-image: url("../images/language-translation.png");
+  background-repeat: norepeat;
+  background-size: cover;
+  background-position: center;
+}
+#box2 {
+  background-image: url("http://www.nancyrourke.com/paintings/deaf/love2.jpg");
+  background-repeat: norepeat;
+  background-size: cover;
+  background-position: center;
+}
+#box3 {
+  background-image: url("../images/clothing-1.jpg");
+  background-repeat: norepeat;
+  background-size: cover;
+  background-position: center;
+}
+.projects a {
+  color: black;
+  text-decoration: none;
+}
+#roadmap {
+  box-sizing: border-box;
+  padding: 20px 0;
+  text-align: center;
+}
+  div > h3 {
+    font-size: 1.2rem;
+    color: #F45B69;
+  }
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 0.5vw;
+  margin: 0 auto;
+  padding-top: 70px;
+  background: #F45B69;
+}
+.timeline ul li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: inherit;
+}
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 30vw;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.5);
+}
+.timeline ul li div::before {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.timeline ul li:nth-child(odd) div {
+  left: 5vw;
+}
+.timeline ul li:nth-child(odd) div::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #F45B69 transparent transparent;
+}
+.timeline ul li:nth-child(even) div {
+  left: -37.5vw;
+}
+
+.timeline ul li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent #F45B69;
+}
+/* Timeline Visibility */
+.timeline ul li::after {
+  background: #fff;
+  transition: background .5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+  background: #F45B69;
+}
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div {
+  transform: translate3d(200px,0,0);
+}
+
+.timeline ul li:nth-child(even) div {
+  transform: translate3d(-200px,0,0);
+}
+
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+.about .presentation {
+  margin: 7px;
+  background-color: rgb(255, 255, 255);
+  padding: 8px;
+}
+.about .watermark {
+  font-size: 0.8rem;
+  display: block;
+  text-align: right;
+  color: grey;
+}
+.about > header > h2 {
+  text-align: center;
+  font-size: 1.6rem;
+}
+.about p {
+  text-align: left;
+  font-size: 1.1rem;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+.about p > span {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin: 20px 0;
+  display: block;
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+.about li {
+  list-style: none;
+  padding: 10px 3px;
+  margin: 15px 20px;
+  border-bottom: 1px solid black;
+}
+.about a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.about a:hover {
+  text-decoration: underline;
+}
+.images-group {
+  border-top: 1px solid black;
+}
+.row {
+  display: flex;
+  justify-content: center;
+}
+.column {
+  padding: 10px;
+  text-align: center;
+}
+.column img {
+    margin-top: 12px;
+    width: 300px;
+}
+@media screen and (max-width: 650px) {
+  .column img {
+    width: 150px;
+  }
+}
+.column a:hover {
+  opacity: 0.6;
+  transition: .5s ease;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+   }
+}
+.sub-footer {
+  padding: 10px 0;
+  border-top: 1px solid black;
+}
+.sub-footer > h2 {
+  text-align: center;
+  font-size: 1.6rem;
+}
+.sub-footer > p {
+  text-align: left;
+  text-indent: 1em;
+}
+.sub-footer .red-info {
+  color: rgb(210, 0, 0);
+  text-align: center;
+  padding: 10px 0;
+  display: block;
+  font-size: 1.2rem;
+}
+.sub-footer a {
+  text-decoration: none;
+}
+.sub-footer a:hover {
+  text-decoration: underline;
+  color: rgb(210, 0, 0);
+}
+.sub-footer .patreon {
+  width: 300px;
+  display: block;
+  margin: auto;
+}
+.sub-footer .qr {
+  width: 150px;
+  display: block;
+  margin:auto;
+}
+.sub-footer .bit-adress {
+  text-align: center;
+  padding: 10px 0;
+  display: block;
+}
+footer {
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6)); /* Standard syntax */
+}
+footer .inner {
+  padding: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid black;
+  margin: 0 10px;
+}
+footer .inner h2 {
+  font-size: 1.2rem;
+}
+footer > blockquote {
+  font-size: 0.9sasrem;
+  text-align: center;
+  padding: 3px 0;
+}
+footer a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+  margin: 0 2.5px;
+}
+footer a:hover {
+  transition: 0.2s ease;
+  color: rgb( 255, 87, 51);
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  footer .inner h2 {
+    font-size: 1rem;
+  }
+  footer .inner p {
+    font-size: 0.8rem;
+  }
+  footer blockquote > p {
+    font-size: 0.7rem;
+  }
+}
+/* 2.1.1 FONTS
+--------------------------------------------------------- */
 h1 {
-  font-size: 3.2rem;
-  font-weight: 300;
+  font-size: 2.6rem;
+  font-family: 'Playfair Display SC', serif;
+}
+h2 {
+  font-size: 2.4rem;
+  font-family: 'Playfair Display SC', serif;
+}
+p {
+  line-height: 1.8rem;
 }
 #title span {
   font-size: 1.6rem;
@@ -158,4 +620,13 @@ h1 {
 }
 #bottomFrame > blockquote {
   font-size: 1.4rem;
+}
+
+
+/* 2.2 POST STYLES
+--------------------------------------------------------- */
+.post header small{
+	color: #888;
+	font-style: italic;
+	font-size: 14px;
 }
