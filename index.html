@@ -6,41 +6,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Machine Learning/Deep Learning blog from a young student">
     <meta name="author" content="Angel Casas Pescador">
-    <link rel="stylesheet" type="text/css" href="CSS/style2.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="CSS/style3.css" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
     <title>Machine Learning Through Another Lens - Angel Casas Pescador - blog</title>
   </head>
-  <body>
-    <header>
-      <div class="Title">
-        <div id="sub-title">
+  <body id='base' class='intro'>
+    <header id="presentation">
+      <div id="topFrame">
+        <div id="title">
           <h1>Machine Learning <span>Through Another </span>LENS</h1>
         </div>
         <nav class="navigation-bar">
           <ul>
-            <li>Start</li>
-            <li>Box</li>
-            <li>About</li>
+            <li><a href="#" onclick="transition()">Posts</a></li>
+            <li><a href="projects.html">Projects</a> </li>
+            <li><a href="About.html">About</a> </li>
           </ul>
         </nav>
+        <div class="top-image" id="first-image"></div>
+      </div>
+      <div id="bottomFrame">
+        <div class="bottom-image" id="second-image"></div>
         <blockquote cite="https://www.goodreads.com/author/quotes/850512.Jiddu_Krishnamurti">
-          <i id="quote">"Anyone who has never made a mistake has never tried anything new. - Albert Einstein"</i>
+          <i id="quote">Anyone who has never made a mistake has never tried anything new. - Albert Einstein</i>
         </blockquote>
       </div>
-      <div class="image-frame">
-        <div class="front-image" id="first-image">
-
-        </div>
-        <div class="front-image" id="second-image">
-
-        </div>
-        <div class="back-image">
-
-        </div>
-      </div>
     </header>
-    <body>
+    <div id="wrapper">
+      <header id="main-header">
+        <h1>Machine Learning <span id='lens'>Through another </span>LENS</h1>
+        <nav id="main-nav">
+          <ul>
+            <li>
+              <form id="search-form" action="/search/" role="search" method="get">
+                <div>
+                  <input type="text" name="q" id="searchfield" value="example: Linear Regression">
+                  <input type="submit" id="search-button" value="Search">
+                </div>
+              </form>
+            </li>
+          </ul>
+          <ul id="menu-main-nav">
+            <li><a href="index.html">Posts</a></li>
+            <li><a href="timeline.html">Timeline</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="About.html">About</a></li>
+          </ul>
+          <!-- end ul -->
+        </nav>
+        <!-- end nav -->
+      </header>
+      <!-- end header -->
+      <main id="content" class="clearfix" role="main">
+        <div class="main">
+          <article class="post">
+            <header>
+              <h2>Neural Machine Translation</h2>
+              <small>
+                <time datetime="2017-11-03" pubdate>Wednesday, November 8th, 2017</time>
+                by
+                <a href="about" title="About Ángel Casas Pescador" rel="author">Ángel Casas</a>
+                .
+              </small>
+              <p class="tweet">
+                <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="http://platform.twitter.com/widgets/tweet_button.c7112f7adf6a24ddcb78d834866e1439.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=&amp;size=m&amp;text=" style="position: static; visibility: visible; width: 61px; height: 20px;"></iframe>
+                <script type="text/javascript" src="http://platform.twitter.com/widgets.js">
+                </script>
+              </p>
+            </header>
+            <!-- end header -->
+            <div class="entry">
+              <p><span id="drop-cap">A</span>rtificial intelligence has seen a rise in popularity, over the past few years, due to the development of new architectures and increased availability of data.<br />
 
-    </body>
+    It is my intent to begin a series of posts describing some of the biggest achievements of machine learning algorithms with the help of some famous examples.
+    This posts are the work of a machine learning student with the strong intention and risk of entering the A.I. field. Being this my own subjective experience in the field mistakes are assured. So, in an attempt to learn from my mistakes it is my wish, for anyone who can comment about my posts, to point out this flaws or simply to give further information or personal thoughts.
+    I apologize in advanced for the lengthy introduction and, while keeping this in mind, lets get started.<br />
+    <h2>Great Pioneers</h2><br />
+    <h4>Ada Lovelace and Alan Turing</h4><br />
+    <br />
+    Two great minds of the 19-20th Century both were incredible mathematicians and presented the bases of Computer Science and programmable machines. They both produced the very first algorithms to be used by machines setting a milestone in the development of programmable machines. When I first learned about them I was blown away by the precision and clear understanding they had about algorithms and coding knowledge into a machine.
+    <br />
+    Alan Turing famously proposed what was later to be called as a Universal Turing machine, meaning a machine capable of working on one task but with the capacity to change its programming to work on a wide range of tasks(Theoretically any task which can be done by a human using pen and paper).
+    I recommend reading The Essential Turing to have a clear understanding of his ideas for those of you who also love Artificial Intelligence.
+    <br />
+    In my next post I will continue to go deeper into the history of Machine Learning before moving on to some excellent projects from our recent days.
+    -Participation and ideas to expand this series of posts are welcomed and greatly appreciated -
+    <br />
+    PS, The image presents a Simulation of our universe showing galaxy formation and is one of the biggest and most precise representations of the formation of our universe. I would love to talk about this incredible almost organic structure formation at some point in the future.
+    Work in Progress.
+
+              </p>
+            </div>
+            <!-- end entry -->
+            <footer></footer>
+            <section id="comments-section">
+              <h3>-Comments Section-</h3>
+              <time datetime="2017-11-08T13:05:21+01:00"></time>
+              <div id="comments">
+                <h3>Ask your Question.</h3>
+                <div id="disqus_thread">
+                  <p>
+                  </p>
+                </div>
+                  <script>
+
+                  /**
+                  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                  /*
+                  var disqus_config = function () {
+                  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                  };
+                  */
+                  (function() { // DON'T EDIT BELOW THIS LINE
+                  var d = document, s = d.createElement('script');
+                  s.src = 'https://angel-casas-github-io.disqus.com/embed.js';
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();
+                  </script>
+                  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+              </div>
+            </section>
+            <!-- end #comments-section -->
+          </article>
+          <!-- end .post -->
+        </div>
+        <!-- end .main -->
+        <aside>
+
+        </aside>
+        <!-- end #sub-footer -->
+      </main>
+      <!-- end #content -->
+      <footer>
+        <div class="inner">
+          <header>
+            <h2>Ángel Casas Pescador</h2>
+            <p>
+              Las Palmas de Gran Canaria, Spain.
+            </p>
+          </header>
+          <div class="icons">
+          <a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <blockquote cite="https://www.goodreads.com/author/quotes/850512.Jiddu_Krishnamurti">
+          <p>
+            - “To understand the immeasurable, the mind must be extraordinarily quiet, still.”  -
+          </p>
+          <p>
+            Jiddu Krishnamurti
+          </p>
+        </blockquote>
+      </footer>
+      <!-- end footer -->
+  </div> <!-- end wrapper -->
     <script type="text/javascript">
     // Random quotes
     var quotes = [
@@ -65,42 +190,21 @@
     }
     setInterval(nextQuote, 8000);
     // end random quotes script
-    (function() {
-  document.addEventListener('DOMContentLoaded', function() {
-    var demos, logo, methods;
-    if (!OriDomi.isSupported) {
-      document.getElementById('unsupported').style.display = 'block';
-      return;
+    // Transition from presentation to blog:
+    function transition() {
+      var body = document.getElementById('base');
+      var presentation = document.getElementsByClassName('presentation')[0];
+      var wrapper = document.getElementsByClassName('wrapper')[0];
+      if (body.className == 'intro') {
+        body.className = 'main-body';
+        presentation.style.display = 'none';
+        wrapper.style.display = 'block';
+      } else {
+        body.className = 'intro';
+        wrapper.style.display = 'none';
+        presentation.style.display = 'block';
+      }
     }
-    demos = [
-      new OriDomi('.front-image', {
-        vPanels: 0,
-        hPanels: 1;
-        ripple: true
-      })
-    ];
-    setTimeout(function() {
-      demos[0].accordion(30);
-      return demos[0].accordion(45, 'top');
-    }, 1000);
-    methods = ['accordion', 'stairs', 'curl', 'reveal', 'foldUp', 'ramp', 'twist', 'fracture'];
-    return document.getElementById('.image-frame').addEventListener('click', function(e) {
-      var angle, el, method, n;
-      if ((el = e.target).className !== 'button') {
-        return;
-      }
-      n = el.getAttribute('data-n');
-      method = methods[Math.abs(Math.floor(Math.random() * methods.length - Math.random()))];
-      angle = Math.floor(Math.random() * 80 * (Math.random() > .5 ? -1 : 1));
-      demos[n][method](method !== 'foldUp' ? angle : void 0);
-      if (method === 'foldUp') {
-        angle = '';
-      }
-      return el.parentNode.getElementsByClassName('label')[0].innerHTML = "" + method + "(" + angle + ")";
-    }, false);
-  });
-
-}).call(this);
   </script>
   </body>
 </html>
