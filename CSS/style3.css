@@ -29,7 +29,6 @@ html {
   width: 100%;
   height: 100%;
   font-size: 100%;
-  overflow: scroll;
   transition: font-size 1s ease-in;
 }
 *, *:before, *:after {
@@ -147,6 +146,7 @@ body {
   background-repeat: no-repeat;
   background-size: 500px auto;
   width: 100%;
+  position: relative;
   transition: background-size 1s ease-in;
 }
 #bottomFrame > blockquote {
