@@ -73,7 +73,7 @@ body {
   background-repeat: no-repeat;
   transition: background-size 1s ease-in;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 395px) {
   html {
     font-size: 75%;
     transition: font-size 1s ease-in;
@@ -93,7 +93,7 @@ body {
 }
 @media screen and (max-height: 500px) {
   html {
-    font-size: 80%;
+    font-size: 75%;
     transition: font-size 1s ease-in;
   }
   #presentation {
