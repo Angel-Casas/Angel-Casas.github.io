@@ -34,6 +34,83 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+/* loader */
+#loader-wrapper .loader-section {
+  display: flex;
+  flex-flow: column nowrap;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 500px;
+  height: 500px;
+  transition: all 1s ease-in-out;
+  z-index: 1000;
+}
+#loader {
+  z-index: 1001;
+}
+#loader-wrapper .loader-section.top-image {
+  top: 0;
+  width: 100%;
+  border: 1px solid green;
+}
+#loader-wrapper #first-image {
+  background-image: url("../images/jupiter-cropped.png");
+  background-position: center 100%;
+  background-size: 500px auto;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  transition: background-size 1s ease-in;
+}
+#loader-wrapper .loader-section.bottom-image {
+  bottom: 0;
+  border: 1px solid yellow;
+}
+#loader-wrapper #second-image {
+  background-image: url("../images/iris-cropped.jpg");
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-size: 500px auto;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: background-size 1s ease-in;
+}
+.loaded #loader-wrapper .loader-section.top-image {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+#loader-wrapper .loader-section.bottom-image {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+.loaded #loader-wrapper .loader-section.top-image,
+.loaded #loader-wrapper .loader-section.bottom-image {
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.00);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.00);
+}
+.loaded #loader {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.loaded #loader-wrapper {
+  visibility: hidden;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: all 0.3s 1s ease-out;
+  transition: all 0.3s 1s ease-out;
+}
+#toogle {
+  z-index: 1005;
+  cursor: pointer;
+}
 
 body {
   width: 100%;
@@ -49,6 +126,9 @@ body {
 #base {
   text-align: center;
 }
+#unsupported {
+  display: none;
+}
 #presentation {
   height: 500px;
   transition: height 1s ease-in;
@@ -57,9 +137,46 @@ body {
   width: 100%;
   max-width: 600px;
 }
+
 #presentation > * {
   flex: 1;
 }
+
+#presentation .circle-images {
+  display: flex;
+  flex-flow: column nowrap;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 500px;
+  height: 500px;
+  transition: all 1s ease-in-out;
+}
+#presentation .circle-images #first-image {
+  background-image: url("../images/jupiter-cropped.png");
+  background-position: center 100%;
+  background-size: 500px auto;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  transition: background-size 1s ease-in;
+}
+
+#presentation .circle-images #second-image {
+  background-image: url("../images/iris-cropped.jpg");
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-size: 500px auto;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: background-size 1s ease-in;
+}
+
 #topFrame {
   display: flex;
   height: 100%;
@@ -67,13 +184,8 @@ body {
   position: relative;
   flex-flow: column nowrap;
   align-items: center;
-  background-image: url("../images/jupiter.png");
-  background-position: center 0%;
-  background-size: 500px auto;
-  background-repeat: no-repeat;
-  transition: background-size 1s ease-in;
 }
-@media screen and (max-width: 395px) {
+@media screen and (max-width: 500px) {
   html {
     font-size: 75%;
     transition: font-size 1s ease-in;
@@ -82,16 +194,21 @@ body {
     height: 300px;
     transition: height 1s ease-in;
   }
-  #topFrame {
+  #presentation .circle-images {
+    width: 275px;
+    height: 300px;
+    transition: all 1s ease-in-out;
+  }
+  #presentation .circle-images #first-image {
     background-size: 300px auto !important;
     transition: background-size 1s ease-in;
   }
-  #bottomFrame {
+  #presentation .circle-images #second-image {
     background-size: 300px auto !important;
     transition: background-size 1s ease-in;
   }
 }
-@media screen and (max-height: 500px) {
+@media screen and (max-height: 600px) {
   html {
     font-size: 75%;
     transition: font-size 1s ease-in;
@@ -100,11 +217,16 @@ body {
     height: 300px;
     transition: height 1s ease-in;
   }
-  #topFrame {
+  #presentation .circle-images {
+    width: 275px;
+    height: 300px;
+    transition: all 1s ease-in-out;
+  }
+  #presentation .circle-images #first-image {
     background-size: 300px auto !important;
     transition: background-size 1s ease-in;
   }
-  #bottomFrame {
+  #presentation .circle-images #second-image {
     background-size: 300px auto !important;
     transition: background-size 1s ease-in;
   }
@@ -143,13 +265,8 @@ body {
 }
 
 #bottomFrame {
-  background-image: url("../images/iris.jpg");
-  background-position: center 100%;
-  background-repeat: no-repeat;
-  background-size: 500px auto;
   width: 100%;
   height: 100%;
-  transition: background-size 1s ease-in;
 }
 #bottomFrame > blockquote {
   position: absolute;

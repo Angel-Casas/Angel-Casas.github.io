@@ -12,8 +12,21 @@
     <title>Machine Learning Through Another Lens - Angel Casas Pescador - blog</title>
   </head>
   <body id='base' class='intro'>
+    <div id="loader-wrapper">
+      <div id="loader">
+      </div>
+      <div class="loader-section section">
+        <div class="top-image" id="first-image"></div>
+        <div class="bottom-image" id="second-image"></div>
+      </div>
+    </div>
     <header id="presentation">
+      <div class="circle-images">
+        <div class="top-image" id="first-image"></div>
+        <div class="bottom-image" id="second-image"></div>
+      </div>
       <div id="topFrame">
+        <button type="button" id="toogle">loaded</button>
         <div id="title">
           <h1>Machine Learning <span>Through Another </span>LENS</h1>
         </div>
@@ -24,10 +37,8 @@
             <li><a href="About.html">About</a> </li>
           </ul>
         </nav>
-        <div class="top-image" id="first-image"></div>
       </div>
       <div id="bottomFrame">
-        <div class="bottom-image" id="second-image"></div>
         <blockquote cite="https://www.goodreads.com/author/quotes/850512.Jiddu_Krishnamurti">
           <p id="quote">Anyone who has never made a mistake has never tried anything new. - Albert Einstein</p>
         </blockquote>
@@ -166,7 +177,6 @@
       </footer>
       <!-- end footer -->
   </div> <!-- end wrapper -->
-  <script src="oriDomi-master/oridomi.min.js"></script>
   <script type="text/javascript">
   // Random quotes
   var quotes = [
@@ -206,17 +216,18 @@
       presentation.style.display = 'block';
     }
   }
-  var folded = new OriDomi(document.getElementById('topFrame'), {
-    vPanels:          0,     // number of panels when folding left or right (vertically oriented)
-    hPanels:          1,     // number of panels when folding top or bottom
-    speed:            1200,  // folding duration in ms
-    ripple:           2,     // backwards ripple effect when animating
-    shadingIntensity: .5,    // lessen the shading effect
-    perspective:      800,   // smaller values exaggerate 3D distortion
-    maxAngle:         40,    // keep the user's folds within a range of -40 to 40 degrees
-    shading:          'soft' // change the shading type
+  document.getElementById("toogle").addEventListener("click", function() {
+    var base = document.getElementById('base');
+    if (base.classList.contains('loaded')) {
+      base.classList.remove('loaded');
+      return;
+    }
+    else {
+      base.classList.add('loaded');
+      return;
+    }
   });
-folded.foldUp();
+
   </script>
   </body>
 </html>
