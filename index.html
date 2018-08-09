@@ -243,6 +243,7 @@
     setTimeout(function(){
        document.getElementById('interactive');
        document.getElementById('loader-wrapper').style.animation="fadeout 0.5s forwards";
+       document.getElementById('base').classList.add('loaded');
        document.getElementById('presentation').style.animation="fadein 3s ease-in";
     },1000);
   }

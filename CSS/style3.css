@@ -58,10 +58,10 @@ html {
   position: fixed;
   top: 0;
   left: 0;
+  background-color: black;
   width: 100vw;
   height: 100vh;
   z-index: 1002;
-  background-color: black;
 }
 
 @keyframes clockwiserotation {
@@ -107,20 +107,6 @@ html {
 }
 #loader-wrapper .loader-section .top-image,
 #loader-wrapper .loader-section .bottom-image {
-  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.00);
-  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.00);
-}
-.loaded #loader-wrapper .loader-section .top-image {
-  -webkit-transform: translateY(-5px);
-  transform: translateY(-5px);
-  transition: all 0.7s 0.3s ease-in;
-}
-.loaded #loader-wrapper .loader-section .bottom-image {
-  -webkit-transform: translateY(5px);
-  transform: translateY(5px);
-}
-.loaded #loader-wrapper .loader-section .top-image,
-.loaded #loader-wrapper .loader-section .bottom-image {
   -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.00);
   transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.00);
 }
