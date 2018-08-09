@@ -234,18 +234,18 @@
       presentation.style.display = 'block';
     }
   }
-  document.onreadystatechange = function () {
-  var state = document.readyState
-  if (state == 'interactive') {
-       document.getElementById('presentation').style.opacity="0";
-  } else if (state == 'complete') {
-      setTimeout(function(){
-         document.getElementById('interactive');
-         document.getElementById('loader-wrapper').style.animation="fadeout 2s forwards";
-         document.getElementById('presentation').style.animation="fadein 2s forwards";
-      },1000);
-  }
-}
+//   document.onreadystatechange = function () {
+//   var state = document.readyState
+//   if (state == 'interactive') {
+//        document.getElementById('presentation').style.opacity="0";
+//   } else if (state == 'complete') {
+//       setTimeout(function(){
+//          document.getElementById('interactive');
+//          document.getElementById('loader-wrapper').style.animation="fadeout 2s forwards";
+//          document.getElementById('presentation').style.animation="fadein 3s forwards";
+//       },1000);
+//   }
+// }
   document.getElementById("toogle").addEventListener("click", function() {
     var base = document.getElementById('base');
     if (base.classList.contains('loaded')) {
