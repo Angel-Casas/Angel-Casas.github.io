@@ -240,11 +240,11 @@ body {
     height: 275px;
     transition: all 1s ease-in-out;
   }
-  #presentation .circle-images #first-image {
+#first-image {
     background-size: 300px auto !important;
     transition: background-size 1s ease-in;
   }
-  #presentation .circle-images #second-image {
+#second-image {
     background-size: 300px auto !important;
     transition: background-size 1s ease-in;
   }
