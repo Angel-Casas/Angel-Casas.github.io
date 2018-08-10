@@ -18,14 +18,13 @@
   </head>
   <body id='base' class='intro'>
     <div class="toogle">
-      <button type="button" id="toogle">loaded</button>
-
+      <button type="button" id="toogle">reload</button>
     </div>
     <div id="loader-wrapper">
       <div id="loader">
         <div class="loader-section section">
-          <div class="top-image" id="first-image"></div>
-          <div class="bottom-image" id="second-image"></div>
+          <div class="top-image"></div>
+          <div class="bottom-image"></div>
         </div>
       </div>
     </div>
@@ -35,24 +34,27 @@
         <div class="bottom-image" id="second-image"></div>
       </div>
       <div id="topFrame">
+        <div class="blackbg"></div>
         <div id="title">
           <h1>Machine Learning <span>Through Another </span>LENS</h1>
         </div>
         <nav class="navigation-bar">
           <ul>
             <li><a href="#" onclick="transition()">Posts</a></li>
+            <li><a href="timeline.html">Timeline</a></li>
             <li><a href="projects.html">Projects</a> </li>
             <li><a href="About.html">About</a> </li>
           </ul>
         </nav>
       </div>
       <div id="bottomFrame">
+        <div class="blackbg"></div>
         <blockquote cite="https://www.goodreads.com/author/quotes/850512.Jiddu_Krishnamurti">
           <p id="quote">Anyone who has never made a mistake has never tried anything new. - Albert Einstein</p>
         </blockquote>
       </div>
     </header>
-    <div id="wrapper">
+    <div id="wrapper" class="slide-up">
       <header id="main-header">
         <h1>Machine Learning <span id='lens'>Through another </span>LENS</h1>
         <nav id="main-nav">
@@ -226,11 +228,21 @@
     var body = document.getElementById('base');
     var presentation = document.getElementById('presentation');
     var wrapper = document.getElementById('wrapper');
-    if (body.className[0] == 'intro') {
-      body.classList.add('main-body');
-      body.classList.remove('intro');
-      presentation.style.display = 'none';
-      wrapper.style.display = 'block';
+    if (body.classList[0] == 'intro') {
+      setTimeout(function() {
+        setTimeout(function() {
+          presentation.style.display = 'none';
+        }, 2000);
+        body.classList.remove('intro');
+        body.classList.add('main-body');
+        wrapper.style.display = 'block';
+        wrapper.style.animation = "slide-up 3s ease-out";
+        document.getElementById("topFrame").style.animation = "swipeup 4s linear";
+        document.getElementById("first-image").style.animation = "swipeup 4s linear";
+        document.getElementById("bottomFrame").style.animation = "swipedown 4s linear";
+        document.getElementById("second-image").style.animation = "swipedown 4s linear";
+      }, 1000);
+      document.getElementsByClassName("navigation-bar")[0].style.animation = "fadeout 1s linear forwards";
     } else {
       body.classList.add('intro');
       wrapper.style.display = 'none';
@@ -242,10 +254,9 @@
   if (state == 'complete') {
     setTimeout(function(){
        document.getElementById('interactive');
-       document.getElementById('loader-wrapper').style.animation="fadeout 0.5s forwards";
        document.getElementById('base').classList.add('loaded');
-       document.getElementById('presentation').style.animation="fadein 3s ease-in";
     },1000);
+    document.getElementById('loader-wrapper').style.animation="fadeout 2s forwards";
   }
 }
   document.getElementById("toogle").addEventListener("click", function() {
