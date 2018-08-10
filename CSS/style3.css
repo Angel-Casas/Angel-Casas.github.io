@@ -52,7 +52,7 @@ html {
   width: 500px;
   height: 500px;
   z-index: 1001;
-  animation: clockwiserotation 2s infinite cubic-bezier(.45,.45,.87,.37) ;
+  /* animation: clockwiserotation 2s infinite cubic-bezier(.45,.45,.87,.37) ; */
 }
 #loader {
   position: fixed;
@@ -63,14 +63,47 @@ html {
   height: 100vh;
   z-index: 1002;
 }
+.circle {
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 2s ease-in-out;
+  margin: auto;
+}
+.big {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+}
+.medium {
+  width: 250px;
+  height: 250px;
+  right: 100%;
+  transform-origin: right;
+  animation: clockwiserotation 4s ease-in-out infinite;
+}
+.small {
+  width: 100px;
+  height: 100px;
+  right: 100%;
+  transform-origin: 250px center;
+  animation: clockwiserotation 4s ease-out infinite;
+
+}
+.tiny {
+  width: 50px;
+  height: 50px;
+  left: 50px;
+  transform-origin: 0 center;
+  animation: clockwiserotation 4s ease-in-out infinite;
+}
 
 @keyframes clockwiserotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  50%, 100% {
-    transform: rotate(360deg);
-  }
+  to {transform: rotate(360deg);}
 }
 
 @keyframes fadeout {
@@ -90,7 +123,7 @@ html {
   to {transform: translateY(140vh);}
 }
 
-#loader-wrapper .top-image {
+/* #loader-wrapper .top-image {
   background-image: url("../images/jupiter-cropped.png");
   background-position: center 100%;
   background-size: 500px auto;
@@ -112,12 +145,8 @@ html {
   z-index: 1004;
   position: relative;
   transition: background-size 1s ease-in;
-}
-#loader-wrapper .loader-section .top-image,
-#loader-wrapper .loader-section .bottom-image {
-  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.00);
-  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.00);
-}
+} */
+
 .loaded #loader {
   opacity: 0;
 }
@@ -218,8 +247,8 @@ body {
 
   #presentation .circle-images,
   #loader-wrapper .loader-section {
-    width: 275px;
-    height: 275px;
+    width: 300px;
+    height: 300px;
     transition: all 1s ease-in-out;
   }
 .top-image {
@@ -229,6 +258,29 @@ body {
 .bottom-image {
     background-size: 300px auto !important;
     transition: background-size 1s ease-in;
+  }
+  .circle {
+    transition: all 2s ease-in-out;
+  }
+  .big {
+    width: 250px;
+    height: 250px;
+  }
+  .medium {
+    width: 125px;
+    height: 125px;
+    right: 125px;
+  }
+  .small {
+    width: 50px;
+    height: 50px;
+    right: 200px;
+    transform-origin: 125px center;
+  }
+  .tiny {
+    width: 25px;
+    height: 25px;
+    right: 25px;
   }
 }
 @media screen and (max-height: 600px) {
@@ -239,8 +291,8 @@ body {
 
   #presentation .circle-images,
   #loader-wrapper .loader-section {
-    width: 275px;
-    height: 275px;
+    width: 300px;
+    height: 300px;
     transition: all 1s ease-in-out;
   }
 .top-image {
@@ -250,6 +302,29 @@ body {
 .bottom-image {
     background-size: 300px auto !important;
     transition: background-size 1s ease-in;
+  }
+  .circle {
+    transition: all 2s ease-in-out;
+  }
+  .big {
+    width: 250px;
+    height: 250px;
+  }
+  .medium {
+    width: 125px;
+    height: 125px;
+    right: 125px;
+  }
+  .small {
+    width: 50px;
+    height: 50px;
+    right: 200px;
+    transform-origin: 125px center;
+  }
+  .tiny {
+    width: 25px;
+    height: 25px;
+    right: 25px;
   }
 }
 .blackbg {
