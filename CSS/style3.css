@@ -75,29 +75,29 @@ html {
   margin: auto;
 }
 .big {
-  width: 500px;
-  height: 500px;
+  width: 490px;
+  height: 490px;
   margin: auto;
 }
 .medium {
-  width: 250px;
-  height: 250px;
-  right: 100%;
+  width: 245px;
+  height: 245px;
+  right: 245px;
   transform-origin: right;
   animation: clockwiserotation 4s ease-in-out infinite;
 }
 .small {
-  width: 100px;
-  height: 100px;
-  right: 100%;
-  transform-origin: 250px center;
+  width: 98px;
+  height: 98px;
+  right: 392px;
+  transform-origin: 245px center;
   animation: clockwiserotation 4s ease-out infinite;
 
 }
 .tiny {
-  width: 50px;
-  height: 50px;
-  left: 50px;
+  width: 44px;
+  height: 44px;
+  left: 44px;
   transform-origin: 0 center;
   animation: clockwiserotation 4s ease-in-out infinite;
 }
@@ -221,7 +221,7 @@ body {
 }
 
 #presentation .circle-images #second-image {
-  background-image: url("../images/iris-cropped.jpg");
+  background-image: url("../images/iris-cropped.png");
   background-position: center 0;
   background-repeat: no-repeat;
   background-size: 500px auto;
@@ -232,6 +232,7 @@ body {
 
 #topFrame {
   display: flex;
+  background-color: black;
   position: relative;
   height: 100%;
   width: 100%;
@@ -244,12 +245,10 @@ body {
     font-size: 75%;
     transition: font-size 1s ease-in;
   }
-
-  #presentation .circle-images,
   #loader-wrapper .loader-section {
     width: 300px;
     height: 300px;
-    transition: all 1s ease-in-out;
+    transition: all 2s ease-in-out;
   }
 .top-image {
     background-size: 300px auto !important;
@@ -263,24 +262,24 @@ body {
     transition: all 2s ease-in-out;
   }
   .big {
-    width: 250px;
-    height: 250px;
+    width: 295px;
+    height: 295px;
   }
   .medium {
-    width: 125px;
-    height: 125px;
-    right: 125px;
+    width: 147px;
+    height: 147px;
+    right: 147px;
   }
   .small {
-    width: 50px;
-    height: 50px;
-    right: 200px;
-    transform-origin: 125px center;
+    width: 30px;
+    height: 30px;
+    right: 295px;
+    transform-origin: 147px center;
   }
   .tiny {
     width: 25px;
     height: 25px;
-    right: 25px;
+    right: 20px;
   }
 }
 @media screen and (max-height: 600px) {
@@ -288,8 +287,6 @@ body {
     font-size: 75%;
     transition: font-size 1s ease-in;
   }
-
-  #presentation .circle-images,
   #loader-wrapper .loader-section {
     width: 300px;
     height: 300px;
@@ -307,28 +304,27 @@ body {
     transition: all 2s ease-in-out;
   }
   .big {
-    width: 250px;
-    height: 250px;
+    width: 295px;
+    height: 295px;
   }
   .medium {
-    width: 125px;
-    height: 125px;
-    right: 125px;
+    width: 147px;
+    height: 147px;
+    right: 147px;
   }
   .small {
-    width: 50px;
-    height: 50px;
-    right: 200px;
-    transform-origin: 125px center;
+    width: 30px;
+    height: 30px;
+    right: 295px;
+    transform-origin: 147px center;
   }
   .tiny {
     width: 25px;
     height: 25px;
-    right: 25px;
+    right: 20px;
   }
 }
 .blackbg {
-  background-color: black;
   width: 100vw;
   height: 50vh;
   position: absolute;
@@ -343,7 +339,7 @@ body {
 }
 .navigation-bar {
   position: relative;
-  max-width: 500px;
+  max-width: 600px;
   width: inherit;
   z-index: 2;
 }
@@ -372,6 +368,7 @@ body {
 #bottomFrame {
   width: 100%;
   height: 100%;
+  background-color: black;
 }
 #bottomFrame > blockquote {
   position: absolute;
@@ -400,7 +397,7 @@ div.slide-up {
 
 @keyframes slide-up {
   from {
-    margin-top: 100%;
+    margin-top: 700%;
   }
 
   to {
@@ -411,7 +408,7 @@ div.slide-up {
 .main-body {
   z-index: 0;
 }
-.main-body::before {
+.main-body:before {
   background-image: url("../images/boxComposite_TNG100-1_gas-shocks_machnum_dm-coldens_2000 copia-2.jpg");
   background-repeat: no-repeat;
   background-position: center;
