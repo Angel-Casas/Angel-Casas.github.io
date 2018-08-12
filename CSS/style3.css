@@ -199,6 +199,7 @@ body {
   background-position: center bottom;
   width: 100%;
   height: 100%;
+  border-bottom: 1px solid black;
   background-repeat: no-repeat;
   transition: background-size 1s ease-in;
 }
@@ -395,9 +396,10 @@ div.slide-up {
 
 .main-body #main-bg-img {
   background-image: url("../images/boxComposite_TNG100-1_gas-shocks_machnum_dm-coldens_2000 copia-2.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center;
   background-size: cover;
+  -webkit-background-size: 831px 1000px;
   background-attachment: fixed;
   position: fixed;
   top: 0;
@@ -530,6 +532,7 @@ textarea:focus {
 }
 
 .projects {
+  display: none;
   text-align: center;
   border-top: 1px solid black;
 }
@@ -595,6 +598,7 @@ textarea:focus {
   text-decoration: none;
 }
 #roadmap {
+  display: none;
   box-sizing: border-box;
   padding: 20px 0;
   text-align: center;
@@ -682,6 +686,9 @@ textarea:focus {
   transform: none;
   visibility: visible;
   opacity: 1;
+}
+.about {
+  display: none;
 }
 
 .about .presentation {
