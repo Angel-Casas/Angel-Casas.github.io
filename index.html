@@ -46,10 +46,10 @@
         </div>
         <nav class="navigation-bar">
           <ul>
-            <li><a href="#" onclick="transition()">Posts</a></li>
-            <li><a href="timeline.html">Timeline</a></li>
-            <li><a href="projects.html">Projects</a> </li>
-            <li><a href="About.html">About</a> </li>
+            <li><a class="nav-buttons" href="#" onclick="transition()">Posts</a></li>
+            <li><a class="nav-buttons" href="timeline.html" onclick="transition()">Timeline</a></li>
+            <li><a class="nav-buttons" href="projects.html" onclick="transition()">Projects</a> </li>
+            <li><a class="nav-buttons" href="About.html" onclick="transition()">About</a> </li>
           </ul>
         </nav>
       </div>
@@ -230,8 +230,8 @@
   setInterval(nextQuote, 8000);
   // end random quotes script
   // Transition from presentation to blog:
+  var body = document.getElementById('base');
   function transition() {
-    var body = document.getElementById('base');
     var presentation = document.getElementById('presentation');
     var wrapper = document.getElementById('wrapper');
     if (body.classList[0] == 'intro') {
@@ -246,7 +246,7 @@
         wrapper.style.display = 'block';
         wrapper.style.animation = "slide-up 3s ease-out";
         document.getElementById("topFrame").style.animation = "swipeup 3s linear";
-        document.getElementsByClassName("circle-images")[0].style.animation = "fadeZ 2.5s linear, fadeout 2s linear";
+        document.getElementsByClassName("circle-images")[0].style.animation = "fadeout 1s linear forwards";
         document.getElementById("bottomFrame").style.animation = "swipedown 3s linear";
       }, 1000);
       document.getElementsByClassName("navigation-bar")[0].style.animation = "fadeout 1s linear forwards";
