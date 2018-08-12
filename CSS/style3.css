@@ -35,7 +35,12 @@ html {
   box-sizing: inherit;
 }
 /* loader */
-.no-js #loader-wrapper {display: none;}
+.no-js #loader-wrapper {
+  display: none;
+}
+#preload-bg-img {
+  background: url("../images/boxComposite_TNG100-1_gas-shocks_machnum_dm-coldens_2000 copia-2.jpg") no-repeat -9999px -9999px;
+}
 
 #loader-wrapper {
   z-index: 1000;
@@ -122,6 +127,10 @@ html {
   from {transform: translateY(0%);}
   to {transform: translateY(140vh);}
 }
+@keyframes fadeZ {
+  from {transform: perspective(500px) translateZ(0);}
+  to {transform: perspective(500px) translateZ(-5000px);}
+}
 
 /* #loader-wrapper .top-image {
   background-image: url("../images/jupiter-cropped.png");
@@ -168,6 +177,7 @@ z-index: 1005;
 }
 
 body {
+  background-color: black;
   width: 100%;
   height: 100%;
 }
@@ -229,10 +239,12 @@ body {
   height: 100%;
   transition: background-size 1s ease-in;
 }
-
+.intro #topFrame,
+.intro #bottomFrame {
+  background-color: black;
+}
 #topFrame {
   display: flex;
-  background-color: black;
   position: relative;
   height: 100%;
   width: 100%;
@@ -271,8 +283,8 @@ body {
     right: 147px;
   }
   .small {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     right: 295px;
     transform-origin: 147px center;
   }
@@ -368,7 +380,6 @@ body {
 #bottomFrame {
   width: 100%;
   height: 100%;
-  background-color: black;
 }
 #bottomFrame > blockquote {
   position: absolute;
@@ -408,18 +419,18 @@ div.slide-up {
 .main-body {
   z-index: 0;
 }
-.main-body:before {
+
+.main-body #main-bg-img {
   background-image: url("../images/boxComposite_TNG100-1_gas-shocks_machnum_dm-coldens_2000 copia-2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  content: " ";
   position: fixed;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   z-index: -1;
 }
 .main-body::-webkit-scrollbar {

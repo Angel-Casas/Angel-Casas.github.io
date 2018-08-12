@@ -17,6 +17,8 @@
     <title>Machine Learning Through Another Lens - Angel Casas Pescador - blog</title>
   </head>
   <body id='base' class='intro'>
+    <div id="preload-bg-img"></div>
+    <div id="main-bg-img"></div>
     <div class="toogle">
       <!-- <button type="button" id="toogle">reload</button> -->
     </div>
@@ -239,12 +241,13 @@
         }, 2000);
         body.classList.remove('intro');
         body.classList.add('main-body');
+        document.getElementById("main-bg-img").style.animation = "fadein 3s linear";
+
         wrapper.style.display = 'block';
         wrapper.style.animation = "slide-up 3s ease-out";
-        document.getElementById("topFrame").style.animation = "swipeup 4s linear";
-        document.getElementById("first-image").style.animation = "swipeup 4s linear";
-        document.getElementById("bottomFrame").style.animation = "swipedown 4s linear";
-        document.getElementById("second-image").style.animation = "swipedown 4s linear";
+        document.getElementById("topFrame").style.animation = "swipeup 3s linear";
+        document.getElementsByClassName("circle-images")[0].style.animation = "fadeZ 2.5s linear, fadeout 2s linear";
+        document.getElementById("bottomFrame").style.animation = "swipedown 3s linear";
       }, 1000);
       document.getElementsByClassName("navigation-bar")[0].style.animation = "fadeout 1s linear forwards";
     } else {
