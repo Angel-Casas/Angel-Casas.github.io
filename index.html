@@ -46,10 +46,10 @@
         </div>
         <nav class="navigation-bar">
           <ul>
-            <li><a class="nav-buttons" href="#" onclick="transition()" name="Posts">Posts</a></li>
-            <li><a class="nav-buttons" href="" onclick="transition()" name="Timeline">Timeline</a></li>
-            <li><a class="nav-buttons" href="" onclick="transition()" name="Projects">Projects</a> </li>
-            <li><a class="nav-buttons" href="" onclick="transition()" name="About">About</a> </li>
+            <li><a class="nav-buttons" href="#content" name="Posts">Posts</a></li>
+            <li><a class="nav-buttons" href="#roadmap" name="Timeline">Timeline</a></li>
+            <li><a class="nav-buttons" href="#projects" name="Projects">Projects</a> </li>
+            <li><a class="nav-buttons" href="#about" name="About">About</a> </li>
           </ul>
         </nav>
       </div>
@@ -403,9 +403,9 @@
   // Transition from presentation to blog:
   var body = document.getElementById('base');
   function transition() {
-    var presentation = document.getElementById('presentation');
-    var wrapper = document.getElementById('wrapper');
     if (body.classList[0] == 'intro') {
+      var presentation = document.getElementById('presentation');
+      var wrapper = document.getElementById('wrapper');
       setTimeout(function() {
         setTimeout(function() {
           presentation.style.display = 'none';
@@ -421,10 +421,6 @@
         document.getElementById("bottomFrame").style.animation = "swipedown 3s linear";
       }, 1000);
       document.getElementsByClassName("navigation-bar")[0].style.animation = "fadeout 1s linear forwards";
-    } else {
-      body.classList.add('intro');
-      wrapper.style.display = 'none';
-      presentation.style.display = 'block';
     }
   }
   document.onreadystatechange = function () {
@@ -437,49 +433,84 @@
     document.getElementById('loader-wrapper').style.animation="fadeout 4s forwards";
   }
 }
-  document.getElementById("toogle").addEventListener("click", function() {
-    var base = document.getElementById('base');
-    if (base.classList.contains('loaded')) {
-      base.classList.remove('loaded');
-      window.location.reload();
-      return;
-    }
-    else {
-      base.classList.add('loaded');
-      return;
-    }
-  });
   // Navigation pages
-  var anchors = document.getElementsByClassNames("nav-buttons");
+  var anchors = document.getElementsByTagName('a');
   for (var i = 0; i<anchors.length; i++) {
     anchors[i].addEventListener('click', handler, false);
   }
-  function handler() {
+  function handler(event) {
+    var post = document.getElementsByClassName("post")[0];
+    var timeline = document.getElementById("roadmap");
+    var projects = document.getElementsByClassName("projects")[0];
+    var about = document.getElementsByClassName("about")[0];
+    event.preventDefault();
     if (this.name == "Posts") {
-      document.getElementsByClassName("post")[0].style.display = "block";
-      document.getElementById("roadmap").style.display = "none";
-      document.getElementsByClassName("projects")[0].style.display = "none";
-      document.getElementsByClassName("about")[0].style.display = "none";
+      transition();
+      post.style.display = "block";
+      timeline.style.display = "none";
+      projects.style.display = "none";
+      about.style.display = "none";
+      return;
     }
     else if (this.name == "Timeline") {
-      document.getElementsByClassName("post")[0].style.display = "none";
-      document.getElementById("roadmap").style.display = "block";
-      document.getElementsByClassName("projects")[0].style.display = "none";
-      document.getElementsByClassName("about")[0].style.display = "none";
+      transition();
+      post.style.display = "none";
+      timeline.style.display = "block";
+      projects.style.display = "none";
+      about.style.display = "none";
+      return;
     }
     else if (this.name == "Projects") {
-      document.getElementsByClassName("post")[0].style.display = "none";
-      document.getElementById("roadmap").style.display = "none";
-      document.getElementsByClassName("projects")[0].style.display = "block";
-      document.getElementsByClassName("about")[0].style.display = "none";
+      transition();
+      post.style.display = "none";
+      timeline.style.display = "none";
+      projects.style.display = "block";
+      about.style.display = "none";
+      return;
     }
-    else if (this.name == "About") {
+    else {
+      transition();
       document.getElementsByClassName("post")[0].style.display = "none";
       document.getElementById("roadmap").style.display = "none";
       document.getElementsByClassName("projects")[0].style.display = "none";
       document.getElementsByClassName("about")[0].style.display = "block";
+      return;
     }
   }
+  // timeline
+  (function() {
+
+  'use strict';
+
+  // define variables
+  var items = document.querySelectorAll(".timeline li");
+
+  // check if an element is in viewport
+  // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function callbackFunc() {
+    for (var i = 0; i < items.length; i++) {
+      if (isElementInViewport(items[i])) {
+        items[i].classList.add("in-view");
+      }
+    }
+  }
+
+  // listen for events
+  window.addEventListener("load", callbackFunc);
+  window.addEventListener("resize", callbackFunc);
+  window.addEventListener("scroll", callbackFunc);
+
+  })();
 
   </script>
   </body>
