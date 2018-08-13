@@ -662,6 +662,7 @@ border-color: transparent transparent transparent #F45B69;
 .timeline ul li::after {
 background: #fff;
 transition: background .5s ease-in-out;
+-webkit-transition: background .5s ease-in-out;
 }
 
 .timeline ul li.in-view::after {
@@ -684,6 +685,7 @@ transform: translate3d(-200px,0,0);
 
 .timeline ul li.in-view div {
 transform: none;
+-webkit-transform: none;
 visibility: visible;
 opacity: 1;
 }
