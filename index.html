@@ -110,10 +110,13 @@
     It is my intent to begin a series of posts describing some of the biggest achievements of machine learning algorithms with the help of some famous examples.
     This posts are the work of a machine learning student with the strong intention and risk of entering the A.I. field. Being this my own subjective experience in the field mistakes are assured. So, in an attempt to learn from my mistakes it is my wish, for anyone who can comment about my posts, to point out this flaws or simply to give further information or personal thoughts.
     I apologize in advanced for the lengthy introduction and, while keeping this in mind, lets get started.<br />
+    </p>
     <h2>Great Pioneers</h2><br />
     <h4>Ada Lovelace and Alan Turing</h4><br />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/800px-Ada_Lovelace_portrait.jpg" alt="Ada lovelace portrait" height="300" width="auto"> <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Alan_Turing_Aged_16.jpg" alt="Alan Turing portrait aged 16" height="300" width="auto">
+    <a class="expandable" data-lightbox="post-1" data-title="Ada Lovelace portrait" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/800px-Ada_Lovelace_portrait.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/800px-Ada_Lovelace_portrait.jpg" alt="Ada Lovelace portrait" height="300" width="auto" /></a>
+    <a class="expandable" data-lightbox="post-1" data-title="Alan Turing portrait at the age of 16" href="https://upload.wikimedia.org/wikipedia/commons/a/a1/Alan_Turing_Aged_16.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Alan_Turing_Aged_16.jpg" alt="Alan Turing portrait at the age of 16" height="300" width="auto" /></a>
     <br />
+    <p>
     Two great minds of the 19-20th Century both were incredible mathematicians and presented the bases of Computer Science and programmable machines. They both produced the very first algorithms to be used by machines setting a milestone in the development of programmable machines. When I first learned about them I was blown away by the precision and clear understanding they had about algorithms and coding knowledge into a machine.
     <br />
     Alan Turing famously proposed what was later to be called as a Universal Turing machine, meaning a machine capable of working on one task but with the capacity to change its programming to work on a wide range of tasks(Theoretically any task which can be done by a human using pen and paper).
@@ -331,14 +334,14 @@
             <div class="images-group">
               <div class="row">
                 <div class="column">
-                  <a class="" data-lightbox="Home" data-title="Sunset in Gran Canaria" href="images/personal/retocada2.jpg"><img src="images/thumbnails/retocada2_tn.jpg" alt="Sunset in Gran Canaria" /></a>
-                  <a class="" data-lightbox="Home" data-title="View from the top of Gran Canaria" href="images/personal/IMG_20170117_123542.jpg"><img src="images/thumbnails/IMG_20170117_123542_tn.jpg" alt="View from the top of Gran Canaria" /></a>
-                  <a class="" data-lightbox="Home" data-title="North coast of Gran Canaria" href="images/personal/panacea.jpg"><img src="images/thumbnails/panacea_tn.jpg" alt="North coast of Gran Canaria" /></a>
+                  <a class="expandable" data-lightbox="Home" data-title="Sunset in Gran Canaria" href="images/personal/retocada2.jpg"><img src="images/thumbnails/retocada2_tn.jpg" alt="Sunset in Gran Canaria" /></a>
+                  <a class="expandable" data-lightbox="Home" data-title="View from the top of Gran Canaria" href="images/personal/IMG_20170117_123542.jpg"><img src="images/thumbnails/IMG_20170117_123542_tn.jpg" alt="View from the top of Gran Canaria" /></a>
+                  <a class="expandable" data-lightbox="Home" data-title="North coast of Gran Canaria" href="images/personal/panacea.jpg"><img src="images/thumbnails/panacea_tn.jpg" alt="North coast of Gran Canaria" /></a>
                 </div>
                 <div class="column">
-                  <a class="" data-lightbox="Home" data-title="Parcial lunar eclipse outside my home, Las Palmas de Gran Canaria" href="images/personal/DSC_0095.jpg"><img src="images/thumbnails/DSC_0095_copia_tn.jpg" alt="Parcial lunar eclipse outside my home, Las Palmas de Gran Canaria" /></a>
-                  <a class="" data-lightbox="Home" data-title="Beautiful Sunset at the beach, Gran Canaria" href="images/personal/DSC_0252.jpg"><img src="images/thumbnails/DSC_0252_copia_tn.jpg" alt="Beautiful Sunset at the beach, Gran Canaria" /></a>
-                  <a class="" data-lightbox="Home" data-title="Waves crashing in the Sunset" href="images/personal/lomax.jpg"><img src="images/thumbnails/lomax_copia_tn.jpg" alt="Waves crashing in the Sunset" /></a>
+                  <a class="expandable" data-lightbox="Home" data-title="Parcial lunar eclipse outside my home, Las Palmas de Gran Canaria" href="images/personal/DSC_0095.jpg"><img src="images/thumbnails/DSC_0095_copia_tn.jpg" alt="Parcial lunar eclipse outside my home, Las Palmas de Gran Canaria" /></a>
+                  <a class="expandable" data-lightbox="Home" data-title="Beautiful Sunset at the beach, Gran Canaria" href="images/personal/DSC_0252.jpg"><img src="images/thumbnails/DSC_0252_copia_tn.jpg" alt="Beautiful Sunset at the beach, Gran Canaria" /></a>
+                  <a class="expandable" data-lightbox="Home" data-title="Waves crashing in the Sunset" href="images/personal/lomax.jpg"><img src="images/thumbnails/lomax_copia_tn.jpg" alt="Waves crashing in the Sunset" /></a>
                 </div>
               </div>
               <!-- end .row -->
@@ -471,7 +474,7 @@
       about.style.display = "none";
       return;
     }
-    else {
+    else if (this.name == "About") {
       transition();
       document.getElementsByClassName("post")[0].style.display = "none";
       document.getElementById("roadmap").style.display = "none";

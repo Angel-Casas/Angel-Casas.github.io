@@ -429,7 +429,7 @@ div.slide-up {
   background: -moz-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)); /* For Firefox 3.6 to 15 */
   background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)); /* Standard syntax */
   text-align: center;
-  min-height: 400px;
+  min-height: 300px;
   padding: 10px;
   color: white;
   font-family: "playfair Display SC";
@@ -749,6 +749,10 @@ opacity: 1;
   padding: 10px;
   text-align: center;
 }
+.expandable:hover {
+  opacity: 0.6;
+  transition: .5s ease;
+}
 .column img {
     margin-top: 12px;
     width: 300px;
@@ -757,10 +761,6 @@ opacity: 1;
   .column img {
     width: 150px;
   }
-}
-.column a:hover {
-  opacity: 0.6;
-  transition: .5s ease;
 }
 .row:after {
     content: "";
@@ -870,6 +870,7 @@ h2 {
 }
 p {
   line-height: 1.8rem;
+  padding-top: 10px;
 }
 #title span {
   font-size: 1.6rem;
