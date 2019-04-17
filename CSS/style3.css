@@ -57,7 +57,6 @@ html {
   width: 500px;
   height: 500px;
   z-index: 1001;
-  /* animation: clockwiserotation 2s infinite cubic-bezier(.45,.45,.87,.37) ; */
 }
 #loader {
   position: fixed;
